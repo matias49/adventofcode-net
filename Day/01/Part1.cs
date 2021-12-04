@@ -12,9 +12,9 @@ namespace Day1
             foreach (string line in lines)
             {
                 double mass = Double.Parse(line);
-                mass = mass / 3;
+                mass /= 3;
                 mass = Math.Floor(mass);
-                mass = mass - 2;
+                mass -= 2;
                 sum += mass;
 
             }   
