@@ -23,7 +23,7 @@ namespace AdventOfCode._2021._01
                     count++;
                 }
             }
-            
+
             return count.ToString();
         }
     }
