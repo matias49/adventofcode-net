@@ -1,28 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
-namespace AdventOfCode._2021._01
+namespace AdventOfCode._2021._01;
+
+internal class Part1
 {
-    internal class Part1
-    {
-        readonly string file = @"2021/01/input.txt";
-        public string Solve()
-        {
-            string[] lines = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), file));
-            int count = 0;
-            for (int i = 1; i < lines.Length; i++)
-            {
-                if (int.Parse(lines[i]) > int.Parse(lines[i - 1]))
-                {
-                    count++;
-                }
-            }
+    private readonly string _file = @"2021/01/input.txt";
 
-            return count.ToString();
-        }
+    public string Solve()
+    {
+        var lines = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), _file));
+        var count = 0;
+        for (var i = 1; i < lines.Length; i++)
+            if (int.Parse(lines[i]) > int.Parse(lines[i - 1]))
+                count++;
+
+        return count.ToString();
     }
 }

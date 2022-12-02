@@ -1,24 +1,26 @@
 using System;
 using System.IO;
-namespace Day1
+
+namespace AdventOfCode.Day._01;
+
+internal class Part1
 {
+    private readonly string _input = @"Day/01/input.txt";
 
-    internal class Part1 {
-        string input = @"Day/01/input.txt";
-        public string Solve() {
-            string[] lines = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), input));
-            double sum = 0;
+    public string Solve()
+    {
+        var lines = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), _input));
+        double sum = 0;
 
-            foreach (string line in lines)
-            {
-                double mass = Double.Parse(line);
-                mass /= 3;
-                mass = Math.Floor(mass);
-                mass -= 2;
-                sum += mass;
-
-            }   
-            return sum.ToString();
+        foreach (var line in lines)
+        {
+            var mass = double.Parse(line);
+            mass /= 3;
+            mass = Math.Floor(mass);
+            mass -= 2;
+            sum += mass;
         }
+
+        return sum.ToString();
     }
 }

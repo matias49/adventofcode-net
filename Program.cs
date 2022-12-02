@@ -1,14 +1,13 @@
-﻿using System;
-namespace AdventNet
+﻿namespace AdventOfCode;
+
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            //Console.WriteLine("Hello World!");
-            //Day1.Day1.Solve();
-            AdventOfCode._2021._01.Day.Solve();
-            AdventOfCode._2021._02.Day.Solve();
-        }
+        //Console.WriteLine("Hello World!");
+        //Day1.Day1.Solve();
+        // _2021._01.Day.Solve();
+        // _2021._02.Day.Solve();
+        _2022._01.Day.Solve();
     }
 }
